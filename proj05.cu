@@ -237,6 +237,20 @@ main( int argc, char *argv[ ] )
         float *dholecxs, *dholecys, *dholecrs;
         int   *dsuccesses;
 
+        cudaMalloc( (void **) &dholeaxs, NUMTRIALS*sizeof(float) );
+        cudaMalloc( (void **) &dholeays, NUMTRIALS*sizeof(float) );
+        cudaMalloc( (void **) &dholears, NUMTRIALS*sizeof(float) );
+
+        cudaMalloc( (void **) &dholebxs, NUMTRIALS*sizeof(float) );
+        cudaMalloc( (void **) &dholebys, NUMTRIALS*sizeof(float) );
+        cudaMalloc( (void **) &dholebrs, NUMTRIALS*sizeof(float) );
+
+        cudaMalloc( (void **) &dholecxs, NUMTRIALS*sizeof(float) );
+        cudaMalloc( (void **) &dholecys, NUMTRIALS*sizeof(float) );
+        cudaMalloc( (void **) &dholecrs, NUMTRIALS*sizeof(float) );
+
+        cudaMalloc( (void **) &dsuccesses, NUMTRIALS*sizeof(int) );
+        /*
     cudaMalloc( (void **) &dholeaxs, sizeof(hholeaxs) );
     cudaMalloc( (void **) &dholeays, sizeof(hholeays) );
     cudaMalloc( (void **) &dholears, sizeof(hholears) );
@@ -250,7 +264,7 @@ main( int argc, char *argv[ ] )
     cudaMalloc( (void **) &dholecrs, sizeof(hholecrs) );
 
     cudaMalloc( (void **) &dsuccesses, sizeof(hsuccesses) );
-
+        */
 	CudaCheckError( );
 
 
